@@ -1,10 +1,10 @@
 // Function to toggle chat box visibility
 function toggleChat() {
     const chatBox = document.querySelector('.chat-box');
-    if (chatBox.style.display === 'none' || chatBox.style.display === '') {
-        chatBox.style.display = 'block';
+    if (chatBox.classList.contains('show')) {
+        chatBox.classList.remove('show'); // Hide the chat box
     } else {
-        chatBox.style.display = 'none';
+        chatBox.classList.add('show'); // Show the chat box
     }
 }
 
