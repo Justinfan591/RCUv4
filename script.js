@@ -10,7 +10,6 @@ function toggleChat() {
     }
 }
 
-
 // Example function to call the Copilot API
 async function callCopilotAPI(userInput) {
     try {
@@ -41,11 +40,12 @@ async function callCopilotAPI(userInput) {
 // Handle sending messages
 async function sendMessage() {
     const userInput = document.getElementById("user-input").value;
-    document.getElementById("user-input").value = "";
+    document.getElementById("user-input").value = ""; // Clear the input field
     document.getElementById("agent-response").innerText = "Processing...";
 
     const response = await callCopilotAPI(userInput);
     document.getElementById("agent-response").innerText = response;
 }
 
-
+// Event listener for chat icon
+document.querySelector('.chat-icon').addEventListener('click', toggleChat);
