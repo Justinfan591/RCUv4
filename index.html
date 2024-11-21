@@ -69,12 +69,14 @@
     </footer>
 
     <!-- Chat Box -->
-<div id="chat-box" class="chat-box">
+<<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<div class="chat-box">
     <h2>AI Assistant</h2>
     <textarea id="user-input" placeholder="Ask me anything..."></textarea>
-    <button id="send-btn">Send</button>
+    <button onclick="sendMessage()">Send</button>
+    <p id="agent-response"></p>
 </div>
-<div id="chat-toggle" class="chat-toggle">💬</div>
 
 
 

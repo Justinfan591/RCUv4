@@ -1,14 +1,14 @@
 // Function to toggle chat box visibility
+// Function to toggle the chat box visibility
 function toggleChat() {
     const chatBox = document.querySelector('.chat-box');
-    if (chatBox.classList.contains('show')) {
-        chatBox.classList.remove('show'); // Hide the chat box
-        console.log("Chat box hidden.");
+    if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+        chatBox.style.display = 'flex'; // Show the chat box
     } else {
-        chatBox.classList.add('show'); // Show the chat box
-        console.log("Chat box visible.");
+        chatBox.style.display = 'none'; // Hide the chat box
     }
 }
+
 
 // Example function to call the Copilot API
 async function callCopilotAPI(userInput) {
