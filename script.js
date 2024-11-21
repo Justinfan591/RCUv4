@@ -44,3 +44,15 @@ async function sendMessage() {
     const response = await callCopilotAPI(userInput);
     document.getElementById("agent-response").innerText = response;
 }
+
+function toggleChat() {
+    console.log("Chat icon clicked!");
+    const chatBox = document.querySelector('.chat-box');
+    if (chatBox.classList.contains('show')) {
+        chatBox.classList.remove('show'); // Hide the chat box
+        console.log("Chat box hidden.");
+    } else {
+        chatBox.classList.add('show'); // Show the chat box
+        console.log("Chat box visible.");
+    }
+}
